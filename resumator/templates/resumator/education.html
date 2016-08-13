@@ -13,16 +13,16 @@
                         <div class="row">
                             <div class="seven columns limit"><b>{{ education.name }}</b></div>
                             <div class="five columns date right-text">
-                                {% if education.start_date and not education.end_date%}{{ education.start_date }} - <i>Today</i>
-                                {% elif education.start_date and education.end_date%}{{ education.start_date }} - {{ education.end_date }}
-                                {% elif education.end_date and not education.start_date%}{{ education.end_date }}
+                                {% if education.start_date and not education.end_date%}{{ education.start_date|date:"N, Y" }} - <i>Today</i>
+                                {% elif education.start_date and education.end_date%}{{ education.start_date|date:"N, Y" }} - {{ education.end_date|date:"N, Y" }}
+                                {% elif education.end_date and not education.start_date%}{{ education.end_date|date:"N, Y" }}
                                 {% endif %}
                             </div>
                         </div>
                         <div class="row description">
                              <div class="seven columns">{{ education }}</div>
                             {% if education.gpa %}
-                            <div class="five columns number right-text"> GPA: {{ education.gpa }}</div>
+                            <div class="five columns number right-text"> CPI: {{ education.gpa }}</div>
                             {% endif %}
                         </div>
                     </div>

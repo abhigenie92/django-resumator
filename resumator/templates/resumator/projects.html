@@ -15,9 +15,9 @@
                             <div class="row">
                                 <div class="seven columns limit"><b>{{ project }}</b></div>
                                 <div class="five columns date right-text">
-                                    {% if project.start_date and not project.end_date%}{{ project.start_date }} - <i>Ongoing</i>
-                                    {% elif project.start_date and project.end_date%}{{ project.start_date }} - {{ project.end_date }}
-                                    {% elif project.end_date and not project.start_date%}{{ project.end_date }}
+                                    {% if project.start_date and not project.end_date%}{{ project.start_date|date:"N, Y" }} - <i>Ongoing</i>
+                                    {% elif project.start_date and project.end_date%}{{ project.start_date|date:"N, Y" }} - {{ project.end_date|date:"N, Y" }}
+                                    {% elif project.end_date and not project.start_date%}{{ project.end_date|date:"N, Y" }}
                                     {% endif %}
                                 </div>
                             </div>

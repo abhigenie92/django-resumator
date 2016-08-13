@@ -15,9 +15,9 @@
                             <div class="row">
                                 <div class="seven columns limit"><b>{{ experience }}</b></div>
                                 <div class="five columns date right-text">
-                                    {% if experience.start_date and not experience.end_date%}{{ experience.start_date }} - <i>Ongoing</i>
-                                    {% elif experience.start_date and experience.end_date%}{{ experience.start_date }} - {{ experience.end_date }}
-                                    {% elif experience.end_date and not experience.start_date%}{{ experience.end_date }}
+                                    {% if experience.start_date and not experience.end_date%}{{ experience.start_date|date:"N, Y" }} - <i>Ongoing</i>
+                                    {% elif experience.start_date and experience.end_date%}{{ experience.start_date|date:"N, Y" }} - {{ experience.end_date|date:"N, Y" }}
+                                    {% elif experience.end_date and not experience.start_date%}{{ experience.end_date|date:"N, Y" }}
                                     {% endif %}
                                 </div>
                             </div>
