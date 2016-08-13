@@ -39,11 +39,13 @@ class BasicInformation(SingletonModel):
                                  default="My short bio")
     long_bio = models.TextField(blank=True,
                                 verbose_name=_("long bio"),
-                                default="My long bio")
+                                default="Please go to the admin page to modify your resume."
+                                        " Append /admin to your URL to visit the admin page")
     email = models.EmailField(default="email@example.com")
+    resumepdf = models.URLField(blank=True)
     github = models.URLField(blank=True)
     linkedin = models.URLField(blank=True)
-    image = models.ImageField(upload_to="images", blank=True)
+    image = models.URLField(blank=True)
 
     def __repr__(self):
         return '<BasicInformation: %s>' % self.name
