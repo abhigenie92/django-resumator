@@ -94,7 +94,7 @@ class Publication(models.Model):
 
 
 class Project(models.Model):
-    name = models.CharField(max_length=50)
+    name = models.TextField(max_length=50)
     description = models.TextField(default=None,
                                    blank=True,
                                    verbose_name=_("description"))
@@ -137,9 +137,9 @@ class Project(models.Model):
 
 
 class Experience(models.Model):
-    company = models.CharField(max_length=50)
-    role = models.CharField(max_length=150)
-    start_date = models.DateField(null=True,
+    company = models.TextField(max_length=50)
+    role = models.TextField(max_length=150)
+    start_date = models.TextField(null=True,
                                   blank=True,
                                   verbose_name=_("start date"))
     end_date = models.DateField(null=True,
