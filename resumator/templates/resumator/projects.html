@@ -33,7 +33,7 @@
                                 {% endwith %}
                             </div>
                             <div class="row">
-                                <div class="twelve columns description">{% spaceless %}<p>{{ project.description }}{% endspaceless %}</p></div>
+                                <div class="twelve columns description">{% spaceless %}<p>{{ project.description | safe }}{% endspaceless %}</p></div>
                             </div>
                         </div>
                     {% if project.link %}</a>{% endif %}

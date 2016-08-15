@@ -33,7 +33,7 @@
                                 {% endwith %}
                             </div>
                             <div class="row">
-                                <div class="twelve columns description">{% spaceless %}<p>{{ experience.description }}</p>{% endspaceless %}</div>
+                                <div class="twelve columns description">{% spaceless %}<p>{{ experience.description | safe }}</p>{% endspaceless %}</div>
                             </div>
                         </div>
                     {% comment %}{% if experience.image %}
