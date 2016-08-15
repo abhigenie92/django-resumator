@@ -139,7 +139,7 @@ class Project(models.Model):
 class Experience(models.Model):
     company = models.TextField(max_length=50)
     role = models.TextField(max_length=150)
-    start_date = models.TextField(null=True,
+    start_date = models.DateField(null=True,
                                   blank=True,
                                   verbose_name=_("start date"))
     end_date = models.DateField(null=True,
