@@ -14,7 +14,7 @@ Email: Contact from https://github.com/AmmsA/
     <meta charset="UTF-8">
     <title>{% block title %}{{ resumator_basicinformation.name }}{% endblock %}</title>
     <meta name="description"
-          content="{% block metadescription %}resumator page of {{ resumator_basicinformation.name }} containing personal projects and experiences{% endblock %}">
+          content="{% block metadescription %}{{ resumator_basicinformation.long_bio }}{% endblock %}">
     <meta name="author" content="{% block metaauthor %}{{ resumator_basicinformation.name }}{% endblock %}">
 
     <!-- Mobile Specific Metas
