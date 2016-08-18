@@ -18,7 +18,7 @@ div{
     /* margin-left: 45%; comment this out*/
 }
 .side-bar {
-    transition:0.2s linear all;
+    transition:0.25s;
     position: absolute;
     top:1;
     left:1;
