@@ -13,6 +13,7 @@ div{
   background: #e6e6e6; /* Gecko Browsers */
 }
 .side-bar {
+    position: fixed;
 
 }
 .side-bar-bio {
