@@ -58,22 +58,7 @@ Email: Contact from https://github.com/AmmsA/
 </head>
 
 <body>
-<script>
-var mySideBarElement = document.body.querySelector(".side-bar");
 
-function fixMenu(){
-  if(window.innerWidth >= 550) { // don't fix menu while mobile view is active
-                                 // remember to change this value when changing @media queries in CSS
-    mySideBarElement.style.transform =
-      "translateY(" + window.pageYOffset + "px)"; // offset the menu by page scroll amount
-  }
-};
-window.onscroll = fixMenu; // fix the menu every time user scrolls
-
-mySideBarElement.style.willChange = "transform"; // small performance optimization
-
-fixMenu(); // fix the menu once when page loads
-</script>
 <!-- Primary Page Layout
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="container">
@@ -190,5 +175,21 @@ fixMenu(); // fix the menu once when page loads
     <!-- End Document
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     {% block extrabody %}{% endblock %}
+<script>
+var mySideBarElement = document.body.querySelector(".side-bar");
+
+function fixMenu(){
+  if(window.innerWidth >= 550) { // don't fix menu while mobile view is active
+                                 // remember to change this value when changing @media queries in CSS
+    mySideBarElement.style.transform =
+      "translateY(" + window.pageYOffset + "px)"; // offset the menu by page scroll amount
+  }
+};
+window.onscroll = fixMenu; // fix the menu every time user scrolls
+
+mySideBarElement.style.willChange = "transform"; // small performance optimization
+
+fixMenu(); // fix the menu once when page loads
+</script>
 </body>
 </html>
