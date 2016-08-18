@@ -14,7 +14,8 @@ div{
 }
 .side-bar {
     position: fixed;
-
+    top:1;
+    left:1;
 }
 .side-bar-bio {
     text-align: left;
